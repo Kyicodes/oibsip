@@ -7,6 +7,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 30px;
+    padding-bottom: 250px;
+}
+
 img {
     width: 86%;
 }
@@ -19,4 +24,17 @@ img {
     text-align: center;
     margin-top: 300px;
     letter-spacing: 10px;
+}
+
+.quote {
+    background-image: linear-gradient(rgba(130, 126, 126, 0.6),
+            rgba(121, 117, 117, 0.6)),
+        url(Plato_Aristotle.jpg);
+
+}
+
+.quote-badge {
+    letter-spacing: 10px;
+    padding-top: 60px;
+    margin-left: 30px;
 }
