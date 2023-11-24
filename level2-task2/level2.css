@@ -1,0 +1,22 @@
+h1 {
+    margin: 0;
+    letter-spacing: 10px;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+
+img {
+    width: 86%;
+}
+
+.tribute-intro {
+    background: #DBD5C8;
+}
+
+.tribute-badge {
+    text-align: center;
+    margin-top: 300px;
+    letter-spacing: 10px;
+}
