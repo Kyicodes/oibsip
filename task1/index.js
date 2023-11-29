@@ -12,7 +12,9 @@ class Calculator {
   }
 
   appendNumber(number) {
-    this.currentOperation += number;
+    if (number === "." && this.currentOperation.includes(".")) return;
+    this.currentOperation =
+      this.currentOperation.toString() + number.toString();
   }
 
   updateDisplay() {
