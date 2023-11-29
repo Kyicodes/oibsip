@@ -81,3 +81,8 @@ operationButtons.forEach((button) => {
     calculator.updateDisplay();
   });
 });
+
+equalsButton.addEventListener("click", () => {
+  calculator.compute();
+  calculator.updateDisplay();
+});
