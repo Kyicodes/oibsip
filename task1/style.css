@@ -22,6 +22,11 @@ body {
 
 }
 
+.calculator-grid button:hover {
+    background-color: white;
+
+}
+
 .double {
     grid-column: span 2;
 }
