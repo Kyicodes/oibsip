@@ -11,10 +11,13 @@ class Calculator {
     this.operation = undefined;
   }
 
+  delete() {
+    this.currentOperation = this.currentOperation.toString().slice(0, -1);
+  }
+
   appendNumber(number) {
     if (number === "." && this.currentOperation.includes(".")) return;
-    this.currentOperation =
-      this.currentOperation.toString() + number.toString();
+    this.currentOperation += number;
   }
 
   chooseOperation(operation) {
@@ -22,6 +25,7 @@ class Calculator {
     if (this.previousOperation !== "") {
       this.compute();
     }
+
     this.operation = operation;
     this.previousOperation = this.currentOperation;
     this.currentOperation = "";
@@ -55,7 +59,12 @@ class Calculator {
 
   updateDisplay() {
     this.currentText.innerHTML = this.currentOperation;
-    this.previousText.innerHTML = this.previousOperation;
+    if (this.previousOperation) {
+      this.previousText.innerHTML =
+        this.previousOperation + " " + this.operation;
+    } else {
+      this.previousText.innerHTML = "";
+    }
   }
 }
 
@@ -89,5 +98,10 @@ equalsButton.addEventListener("click", () => {
 
 clearButton.addEventListener("click", () => {
   calculator.clear();
+  calculator.updateDisplay();
+});
+
+deleteButton.addEventListener("click", () => {
+  calculator.delete();
   calculator.updateDisplay();
 });
