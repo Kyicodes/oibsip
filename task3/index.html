@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>To Do List - JavaScript</title>
 </head>
 
@@ -14,9 +15,10 @@
                 <h2>TO DO LIST 📃</h2>
             </header>
             <input type="text" id="todo-input" class="todoText" placeholder="Add a task...">
-            <button>+</button>
+            <button class="add-item">+</button>
             <div>
-                <ul class="todo-list" id="list-items">
+                <ul>
+                    <li class="todo-list" id="list-items"></li>
                 </ul>
             </div>
             <script src="index.js"></script>
