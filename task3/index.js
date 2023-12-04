@@ -10,12 +10,28 @@ function createToDoData() {
   }
 }
 
+addTaskButton.addEventListener("click", createToDoData);
+
 function addItemsToList() {
   let newItem = document.createElement("li");
   newItem.innerText = todoInput.value;
+
+  // Edit button
+  let editButton = document.createElement("button");
+  editButton.innerText = "✏";
+  editButton.addEventListener("click", () => {
+    let editInput = document.createElement("input");
+    editInput.value = newItem.innerText;
+    newItem.innerText = "";
+    newItem.appendChild(editInput);
+    editInput.focus();
+    editInput.addEventListener("blur", () => {
+      newItem.innerText = editInput.value;
+    });
+  });
+  newItem.appendChild(editButton);
+
   listItems.appendChild(newItem);
   todoInput.value = "";
   todoInput.focus();
 }
-
-addButton.addEventListener("click", createToDoData);
