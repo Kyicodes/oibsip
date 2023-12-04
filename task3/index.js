@@ -31,6 +31,14 @@ function addItemsToList() {
   });
   newItem.appendChild(editButton);
 
+  // Delete button
+  let deleteButton = document.createElement("button");
+  deleteButton.innerText = "✖";
+  deleteButton.addEventListener("click", () => {
+    newItem.remove();
+  });
+  newItem.appendChild(deleteButton);
+
   listItems.appendChild(newItem);
   todoInput.value = "";
   todoInput.focus();
