@@ -8,6 +8,19 @@ h2 {
     letter-spacing: 3px;
 }
 
+li {
+    list-style: none;
+}
+
+span {
+    padding: 20px;
+    font-size: 25px;
+    line-height: 2.5;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
 .to-do {
     background-color: rgb(161, 167, 211, 0.5);
     width: 600px;
